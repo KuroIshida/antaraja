@@ -25,7 +25,7 @@
           <div class="box box-primary">
             <div class="box-header with-border">
               <div class="box-body">
-                <table class="table table-bordered table-striped">
+                <table id="example1" class="table table-bordered table-striped">
                   <thead>
                     <tr>
                       <th>ID</th>
@@ -43,8 +43,8 @@
                         <td><?php echo $value->isi_berita; ?></td>
                         <td><?php echo $value->gambar; ?></td>
                         <td>
-                          <a href="#" class="btn btn-primary btn-fl" role="button">Edit</a>
-                          <a href="#" class="btn btn-primary btn-fl" role="button">Delete</a>
+                          <a href="<?php echo site_url('news/edit/'.$value->id) ?>" class="btn btn-primary btn-fl" role="button">Edit</a>
+                          <a onclick="deleteConfirm('<?php echo site_url('news/delete/'.$value->id) ?>')" href="#!" class="btn btn-danger btn-fl" role="button">Delete</a>
                         </td>
                       </tr>
                       <?php
@@ -53,6 +53,7 @@
                   </tbody>
                 </table>
               </div>
+              <a href="#" class="btn btn-success btn-lg" role="button">Add News</a>
             </div>
           </div>
         </div>
@@ -65,4 +66,25 @@
 
 <?php $this->load->view("back/js_admin") ?>
 </body>
+<link rel="stylesheet" href="<?php echo base_url('assets/backend/AdminLTE-2.4.5') ?>/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+<script src="<?php echo base_url('assets/backend/AdminLTE-2.4.5') ?>/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="<?php echo base_url('assets/backend/AdminLTE-2.4.5') ?>/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script>
+  $(function () {
+    $('#example1').DataTable()
+    $('#example2').DataTable({
+      'paging'      : true,
+      'lengthChange': false,
+      'searching'   : false,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : false
+    })
+  })
+
+  function deleteConfirm(url){
+  	$('#btn-delete').attr('href', url);
+  	$('#deleteModal').modal();
+  }
+</script>
 </html>
