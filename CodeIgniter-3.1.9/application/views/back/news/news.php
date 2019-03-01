@@ -1,7 +1,7 @@
 <?php $this->load->view("back/meta") ?>
 <?php $this->load->view("back/head") ?>
 <?php $this->load->view("back/sidebar") ?>
-
+<?php $this->load->view("back/news/modal"); ?>
 <div class="wrapper">
 
   <!-- Content Wrapper. Contains page content -->
@@ -26,11 +26,16 @@
             <div class="box-header with-border">
               <div class="box-body">
                 <table id="example1" class="table table-bordered table-striped">
+                  <?php if ($this->session->flashdata('success')): ?>
+                      <div class="alert alert-success" role="alert">
+                      <?php echo $this->session->flashdata('success'); ?>
+                    </div>
+                  <?php endif; ?>
                   <thead>
                     <tr>
                       <th>ID</th>
                       <th>Headline</th>
-                      <th>News Conteent</th>
+                      <th>News Content</th>
                       <th>Picture</th>
                       <th>Action</th>
                     </tr>
@@ -44,7 +49,7 @@
                         <td><?php echo $value->gambar; ?></td>
                         <td>
                           <a href="<?php echo site_url('news/edit/'.$value->id) ?>" class="btn btn-primary btn-fl" role="button">Edit</a>
-                          <a onclick="deleteConfirm('<?php echo site_url('news/delete/'.$value->id) ?>')" href="#!" class="btn btn-danger btn-fl" role="button">Delete</a>
+                          <a onclick="deleteConfirm('<?php echo site_url('news/delete/'.$value->id) ?>')" href="#!" class="btn btn-danger btn-fl">Delete</a>
                         </td>
                       </tr>
                       <?php
@@ -53,7 +58,7 @@
                   </tbody>
                 </table>
               </div>
-              <a href="#" class="btn btn-success btn-lg" role="button">Add News</a>
+              <a href="<?php echo base_url('news/add') ?>" class="btn btn-success btn-lg" role="button">Add News</a>
             </div>
           </div>
         </div>
@@ -65,6 +70,12 @@
 <!-- ./wrapper -->
 
 <?php $this->load->view("back/js_admin") ?>
+<script>
+  function deleteConfirm(url){
+    $('#btn-delete').attr('href', url);
+    $('#deleteModal').modal();
+}
+</script>
 </body>
 <link rel="stylesheet" href="<?php echo base_url('assets/backend/AdminLTE-2.4.5') ?>/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
 <script src="<?php echo base_url('assets/backend/AdminLTE-2.4.5') ?>/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
@@ -81,10 +92,5 @@
       'autoWidth'   : false
     })
   })
-
-  function deleteConfirm(url){
-  	$('#btn-delete').attr('href', url);
-  	$('#deleteModal').modal();
-  }
 </script>
 </html>

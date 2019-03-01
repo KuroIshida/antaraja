@@ -21,7 +21,7 @@ class news extends CI_Controller
 
   public function add()
   {
-    $modelData = $this->product_model;
+    $modelData = $this->news_model;
     $validation = $this->form_validation;
     $validation->set_rules($modelData->rules());
 
@@ -52,12 +52,12 @@ class news extends CI_Controller
        $this->load->view("back/news/edit_news", $data);
    }
 
-   function delete()
+   public function delete($id = null)
    {
-     if (!isset($id)) show_404();
+     if (!isset($id)){ show_404();}
 
-       if ($this->news_model->deleteNews($id)) {
-           redirect(site_url('news/news'));
+       if ($this->news_model->delete($id)) {
+           redirect(site_url('news'));
    }
 }
 }

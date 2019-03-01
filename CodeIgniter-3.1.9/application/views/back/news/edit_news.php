@@ -26,14 +26,18 @@
             <div class="box-header with-border">
               <div class="box-body">
                 <div class="form-group">
-                  <form action="<?php base_url('news/edit') ?>" method="post" enctype="multipart/form-data" >
+                  <?php if ($this->session->flashdata('success')): ?>
+                      <?php redirect(base_url('news')) ?>
+                    </div>
+                  <?php endif; ?>
+                  <form action="<?php base_url('back/news/news') ?>" method="post" enctype="multipart/form-data" >
                     <input type="hidden" name="id" value="<?php echo $news->id?>" />
                     <div class="form-group">
-                      <label for="name">Headline</label>
-                      <input class="form-control <?php echo form_error('name') ? 'is-invalid':'' ?>"
-                      type="text" name="name" placeholder="Headline" />
+                      <label for="headline">Headline</label>
+                      <input class="form-control <?php echo form_error('headline') ? 'is-invalid':'' ?>"
+                      type="text" name="headline" placeholder="Headline" />
                       <div class="invalid-feedback">
-                        <?php echo form_error('name') ?>
+                        <?php echo form_error('headline') ?>
                       </div>
                     </div>
 
