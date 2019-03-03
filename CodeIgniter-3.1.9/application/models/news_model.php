@@ -23,6 +23,11 @@
           ['field' => 'isi_berita',
            'label' => 'Isi Berita',
            'rules' => 'required'],
+
+          ['field' => 'gambar',
+           'label' => 'Gambar',
+           'rules' => 'required',
+          ]
         ];
       }
 
@@ -56,7 +61,7 @@
 
       private function _uploadImage()
       {
-        $config['upload_path']    = 'upload/news_upload';
+        $config['upload_path']    = './upload/news_upload';
         $config['allowed_types']  = 'jpg|jpeg|bmp';
         $config['file_name']      = $this->gambar;
         $config['overwrite']      = true;
@@ -68,7 +73,7 @@
           echo "SUCCESS";
           return $this->upload->data('file_name');
         }
-        echo "HELLO";
+        echo "FAIL";
       }
 
       public function getById($id)

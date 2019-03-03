@@ -51,16 +51,17 @@
                     </div>
 
                     <div class="form-group">
-                      <label for="name">Gambar</label>
+                      <label for="gambar">Gambar</label>
                       <input class="form-control-file <?php echo form_error('gambar') ? 'is-invalid':'' ?>"
                       type="file" name="gambar" />
+                      <input type="hidden" name="old_image" value="<?php echo $data->gambar; ?>">
                       <div class="invalid-feedback">
                         <?php echo form_error('gambar') ?>
                       </div>
                     </div>
 
                     <input class="btn btn-success btn-lg" type="submit" name="btn" value="Save" />
-                    <button href="" type="button" name="button" class="btn btn-danger btn-lg">Cancel</button>
+                    <button href="<?php echo base_url('admin'); ?>" type="submit" name="button" class="btn btn-danger btn-lg">Cancel</button>
                   </form>
                 </div>
               </div>
