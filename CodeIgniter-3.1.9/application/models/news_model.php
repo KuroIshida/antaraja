@@ -73,7 +73,7 @@
           echo "SUCCESS";
           return $this->upload->data('file_name');
         }
-        echo "FAIL";
+        return "default.jpg";
       }
 
       public function getById($id)
