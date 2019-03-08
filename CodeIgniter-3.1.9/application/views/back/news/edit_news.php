@@ -53,7 +53,7 @@
                     <div class="form-group">
                       <label for="name">Gambar</label>
                       <input class="form-control-file <?php echo form_error('name') ? 'is-invalid':'' ?>"
-                      type="file" name="image" />
+                      type="file" name="name" />
                       <div class="invalid-feedback">
                         <?php echo form_error('image') ?>
                       </div>

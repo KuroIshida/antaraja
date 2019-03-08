@@ -23,11 +23,11 @@
           ['field' => 'isi_berita',
            'label' => 'Isi Berita',
            'rules' => 'required'],
-
-          ['field' => 'gambar',
-           'label' => 'Gambar',
-           'rules' => 'required',
-          ]
+          // problem with adding into database
+          // ['field' => 'gambar',
+          //  'label' => 'Gambar',
+          //  'rules' => 'required',
+          // ]
         ];
       }
 

@@ -44,7 +44,7 @@ class news extends CI_Controller
 
        if ($validation->run()) {
            $modelData->editNews();
-           $this->session->set_flashdata('success', 'News Inserted');
+           $this->session->set_flashdata('success', 'News Edited');
        }
 
        $data["news"] = $modelData->getById($id);

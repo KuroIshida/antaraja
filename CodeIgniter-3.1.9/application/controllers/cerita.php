@@ -15,31 +15,34 @@ class cerita extends CI_Controller
 
   function index()
   {
-    $data["cerita"] = $this->cerita_model->getNews();
-    $this->load->view("back/news/news", $data);
+    $data["cerita"] = $this->cerita_model->getCerita();
+    $this->load->view("back/cerita/cerita", $data);
   }
 
   public function add()
   {
-    $modelData = $this->news_model;
+    $modelData = $this->cerita_model;
     $validation = $this->form_validation;
     $validation->set_rules($modelData->rules());
 
     if ($validation->run()) {
       $modelData->save();
-      echo "HELLO";
-      $this->session->set_flashdata('success', 'Berhasil disimpan');
+      $this->session->set_flashdata('success', 'Berhasil Ditambahkan');
     }
 
-      $this->load->view("back/news/add_news");
+      $this->load->view("front/news/cerita");
   }
 
-   public function delete($id = null)
+  public function delete($id = null)
    {
      if (!isset($id)){ show_404();}
 
-       if ($this->news_model->delete($id)) {
-           redirect(site_url('news'));
+       if ($this->cerita_model->delete($id)) {
+           redirect(site_url('cerita'));
+         }
    }
-}
+  public function send()
+  {
+
+  }
 }
