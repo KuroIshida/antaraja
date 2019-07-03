@@ -9,11 +9,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        User Data
+        Add News
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">User Data</li>
+        <li><a href="news"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="news"><i class="fa fa-dashboard"></i>news </a></li>
+        <li class="active">Add News</li>
       </ol>
     </section>
 
@@ -51,17 +52,17 @@
                     </div>
 
                     <div class="form-group">
-                      <label for="gambar">Gambar</label>
-                      <input class="form-control-file <?php echo form_error('gambar') ? 'is-invalid':'' ?>"
-                      type="file" name="gambar" />
-                      <input type="hidden" name="old_image" value="<?php echo $data->gambar; ?>">
+                      <label for="image">Gambar</label>
+                      <input class="form-control-file <?php echo form_error('image') ? 'is-invalid':'' ?>"
+                      type="file" name="image" />
+                      <!-- <input type="hidden" name="old_image" value="<?php echo $news->gambar; ?>"> -->
                       <div class="invalid-feedback">
-                        <?php echo form_error('gambar') ?>
+                        <?php echo form_error('image') ?>
                       </div>
                     </div>
 
-                    <input class="btn btn-success btn-lg" type="submit" name="btn" value="Save" />
-                    <button href="<?php echo base_url('admin'); ?>" type="submit" name="button" class="btn btn-danger btn-lg">Cancel</button>
+                    <input class="btn btn-success btn-lg" type="submit" name="btn" value="Save"/>
+                    <a href="<?php echo base_url('news'); ?>" name="button" class="btn btn-danger btn-lg">Cancel</a>
                   </form>
                 </div>
               </div>

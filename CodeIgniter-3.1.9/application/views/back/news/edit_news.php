@@ -12,7 +12,8 @@
         Edit News
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="news"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="news"><i class="fa fa-dashboard"></i>news </a></li>
         <li class="active">Edit News</li>
       </ol>
     </section>
@@ -51,16 +52,16 @@
                     </div>
 
                     <div class="form-group">
-                      <label for="name">Gambar</label>
-                      <input class="form-control-file <?php echo form_error('name') ? 'is-invalid':'' ?>"
-                      type="file" name="name" />
+                      <label for="image">Gambar</label>
+                      <input class="form-control-file <?php echo form_error('image') ? 'is-invalid':'' ?>"
+                      type="file" name="image" />
                       <div class="invalid-feedback">
                         <?php echo form_error('image') ?>
                       </div>
                     </div>
 
                     <input class="btn btn-success btn-lg" type="submit" name="btn" value="Save" />
-                    <button href="" type="button" name="button" class="btn btn-danger btn-lg">Cancel</button>
+                    <a href="<?php echo base_url('news'); ?>" name="button" class="btn btn-danger btn-lg">Cancel</a>
                   </form>
                 </div>
               </div>

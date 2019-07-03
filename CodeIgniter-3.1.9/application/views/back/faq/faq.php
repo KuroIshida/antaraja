@@ -1,7 +1,7 @@
 <?php $this->load->view("back/meta") ?>
 <?php $this->load->view("back/head") ?>
 <?php $this->load->view("back/sidebar") ?>
-
+<?php $this->load->view("back/news/modal"); ?>
 <div class="wrapper">
 
   <!-- Content Wrapper. Contains page content -->
@@ -9,11 +9,11 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        User Data
+        FAQ
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">User Data</li>
+        <li><a href="<?php echo base_url("news"); ?>"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">FAQ</li>
       </ol>
     </section>
 
@@ -25,9 +25,7 @@
           <div class="box box-primary">
             <div class="box-header with-border">
               <div class="box-body">
-                <div class="form-group">
 
-                </div>
               </div>
             </div>
           </div>

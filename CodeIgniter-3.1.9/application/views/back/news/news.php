@@ -9,11 +9,11 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        User Data
+        News
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">User Data</li>
+        <li><a href="<?php echo base_url("news"); ?>"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">News</li>
       </ol>
     </section>
 
@@ -35,7 +35,7 @@
                     <tr>
                       <th>ID</th>
                       <th>Headline</th>
-                      <th>News Content</th>
+                      <th style="width:500px">News Content</th>
                       <th>Picture</th>
                       <th>Action</th>
                     </tr>

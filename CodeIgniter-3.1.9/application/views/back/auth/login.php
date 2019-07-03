@@ -57,10 +57,7 @@
       </div>
       <p><a href="forgot_password"><?php echo lang('login_forgot_password');?></a></p>
     <?php echo form_close();?>
-
-    <a href="#">I forgot my password</a><br>
-    <a href="register.html" class="text-center">Register a new membership</a><br>
-    <a href="#">Skip Login</a>
+    <a href="<?php echo base_url('Welcome'); ?>">Skip Login</a>
 
   </div>
   <!-- /.login-box-body -->

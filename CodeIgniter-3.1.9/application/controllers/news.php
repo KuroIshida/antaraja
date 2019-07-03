@@ -11,6 +11,7 @@ class news extends CI_Controller
     parent:: __construct();
     $this->load->model("news_model");
     $this->load->library('form_validation');
+    $this->load->library('upload');
   }
 
   function index()
@@ -60,5 +61,6 @@ class news extends CI_Controller
        if ($this->news_model->delete($id)) {
            redirect(site_url('news'));
    }
-}
+ }
+
 }
