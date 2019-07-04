@@ -37,7 +37,7 @@
         </a>
       </li>
       <li>
-        <a href="<?php echo base_url("intact/getIntact"); ?>">
+        <a href="<?php echo base_url("intact/adminIntact"); ?>">
           <i class="fa fa-dashboard"></i> <span>HUBUNGI KAMI</span>
         </a>
       </li>

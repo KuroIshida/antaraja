@@ -8,18 +8,23 @@
   <body>
     <?php $this->load->view("front/navbar"); ?>
     <div class="container">
-    <h1>SO APPARENTLY I NEED TO MAKE A NEWS SITE FIRST</h1>
+      <br><br>
+
     <!-- Carousel Start -->
+    <section class="Merchant">
+      <h4>Recomendded <strong class="text-primary">Places</strong></h4>
+      <h5 class="mb-5">Find Our Favourite <strong class="text-primary">Resto</strong> here</h5>
+    </section>
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="width:100%;height:50%">
       <div class="carousel-inner" style="padding-left:35%">
         <div class="carousel-item active">
-          <img class="d-block w-50" src="assets\images\indonesian-sate-ayam-1-X3.jpg" alt="First slide" style="height:100%">
+          <img class="d-block w-100" src="assets\images\indonesian-sate-ayam-1-X3.jpg" alt="First slide" style="height:100%">
         </div>
         <div class="carousel-item">
-          <img  class="d-block w-50" src="assets\images\antaraja.svg" alt="Second slide" style="height:100%">
+          <img  class="d-block w-100" src="assets\images\IMG_7741-2000x1333.jpg" alt="Second slide" style="height:100%">
         </div>
         <div class="carousel-item">
-          <img class="d-block w-50" src="assets\images\Pirates-bay-cafe-food-Nusa-Dua-and-Uluwatu.jpg" alt="Third slide" style="height:100%">
+          <img class="d-block w-100" src="assets\images\Pirates-bay-cafe-food-Nusa-Dua-and-Uluwatu.jpg" alt="Third slide" style="height:100%">
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">

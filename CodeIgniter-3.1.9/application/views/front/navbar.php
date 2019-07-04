@@ -10,7 +10,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-
 <nav class="navbar navbar-expand-md navbar-dark navbar-fixed-top" style="background-color:grey">
 <div class="navbar-header">
   <a class="navbar-brand" href="Welcome">
@@ -28,7 +27,7 @@
       <a class="nav-link" href="<?php echo base_url("services") ?>">Layanan</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="faq">FAQ</a>
+      <a class="nav-link" href="<?php echo base_url("faq") ?>">FAQ</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="<?php echo base_url("intact") ?>">Kontak Kami</a>

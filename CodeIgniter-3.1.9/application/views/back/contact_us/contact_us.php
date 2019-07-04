@@ -31,11 +31,17 @@
                       <tr>
                         <th>ID</th>
                         <th>Email</th>
-                        <th>Konten</th>
+                        <th>Isi Pesan</th>
+                        <th>Waktu</th>
                       </tr>
                     </thead>
                     <tbody>
-
+                      <?php foreach ($contact_us as $value){ ?>
+                        <td><?php echo $value->id; ?></td>
+                        <td><?php echo $value->email; ?></td>
+                        <td><?php echo $value->message; ?></td>
+                        <td><?php echo $value->times; ?></td>
+                      <?php } ?>
                     </tbody>
                   </table>
                 </div>

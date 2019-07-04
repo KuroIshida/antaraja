@@ -5,7 +5,7 @@
      */
     class intact_model extends CI_Model
     {
-      private $_table = "intact";
+      private $_table = "contact_us";
 
       public $id;
       public $name;
@@ -45,6 +45,7 @@
         $this->name = $post["name"];
         $this->email = $post["email"];
         $this->message = $post["message"];
+        $this->times = $post["times"];
         $this->db->insert('contact_us', $this);
       }
 

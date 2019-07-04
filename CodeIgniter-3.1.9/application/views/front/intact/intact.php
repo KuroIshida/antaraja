@@ -6,7 +6,8 @@
   </head>
   <body>
     <?php $this->load->view("front/navbar") ?>
-    <?php $this->load->view("front/contact_us")?>
+    <?php $this->load->view("front/contact_us"); ?>
+
   </body>
   <footer><?php $this->load->view("front/footer") ?></footer>
 </html>

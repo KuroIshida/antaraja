@@ -1,57 +1,89 @@
-<!------ Include the above in your HEAD tag ---------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="assets\ContactFrom_v12\images\icons\favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="assets\ContactFrom_v12\vendor\bootstrap\css\bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets\ContactFrom_v12\fonts\font-awesome-4.7.0\css\font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="assets\ContactFrom_v12\vendor\animate\animate.css">
+	<link rel="stylesheet" type="text/css" href="assets\ContactFrom_v12\vendor\css-hamburgers\hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="assets\ContactFrom_v12\vendor\select2\select2.min.css">
+	<link rel="stylesheet" type="text/css" href="assets\ContactFrom_v12\css\main.css">
+	<link rel="stylesheet" type="text/css" href="assets\ContactFrom_v12\css\util.css">
+</head>
+<body>
+		<div class="container">
+			<div class="wrap-contact100">
+				<div class="contact100-pic js-tilt" data-tilt>
+					<img src="assets\ContactFrom_v12\images\img-01.png" alt="IMG">
+				</div>
+				<div class="form-group">
+					<?php if ($this->session->flashdata('success')): ?>
+							<?php redirect(base_url('news')) ?>
+				</div>
+			<?php endif; ?>
 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-<div class="container">
-	<div class="row justify-content-center">
-		<div class="col-12 col-md-8 col-lg-6 pb-5">
-      <!--Form with header-->
-      <form action="<?php base_url('back/intact/add') ?>" method="post">
-        <div class="card border-primary rounded-0">
-          <div class="card-header p-0">
-            <div class="bg-info text-white text-center py-2">
-              <h3><i class="fa fa-envelope"></i>Hubungi Kami</h3>
-              <p class="m-0">Silahkan</p>
-            </div>
-          </div>
-            <div class="card-body p-3">
-              <!--Body-->
-							<div class="form-group">
-								<?php if ($this->session->flashdata('success')): ?>
-									<?php redirect(base_url('intact')) ?>
-								<?php endif; ?>
-							</div>
-              <div class="form-group">
-                <div class="input-group mb-2">
-                  <div class="input-group-prepend">
-                    <div class="input-group-text"><i class="fa fa-user text-info"></i></div>
-                  </div>
-                  <input type="text" class="form-control"  name="name" placeholder="Masukkan nama anda" required>
-                </div>
-                </div>
-                <div class="form-group">
-                  <div class="input-group mb-2">
-                    <div class="input-group-prepend">
-                      <div class="input-group-text"><i class="fa fa-envelope text-info"></i></div>
-                    </div>
-                    <input type="email" class="form-control"  name="email" placeholder="example@gmail.com" required>
-                  </div>
-                </div>
+				<form action="<?php base_url('back/intact/add') ?>" method="post" enctype="multipart/form-data" class="contact100-form validate-form">
+					<span class="contact100-form-title">
+						Kirimkan Pesan Pada Kami
+					</span>
 
-                <div class="form-group">
-                  <div class="input-group mb-2">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text"><i class="fa fa-comment text-info"></i></div>
-                    </div>
-                    <textarea class="form-control"  name="message" placeholder="Masukkan Pesan Anda" required></textarea>
-                  </div>
-                </div>
-                <div class="text-center">
-                  <input type="submit" value="Send" class="btn btn-info btn-block rounded-0 py-2">
-                </div>
-            </div>
-        </div>
-      </form>
-      <!--Form with header-->
-    </div>
-  </div>
-</div>
+					<div class="wrap-input100 validate-input" data-validate = "Name is required">
+						<input class="input100" type="text" name="name" placeholder="Nama">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-user" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Format Incorrect: email@mail.com">
+						<input class="input100" type="text" name="email" placeholder="Email">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Message is required">
+						<textarea class="input100" name="message" placeholder="Message"></textarea>
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="container-contact100-form-btn">
+						<button class="contact100-form-btn" >
+							Send
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+
+
+
+
+
+	<script src="assets\ContactFrom_v12\vendor\jquery\jquery-3.2.1.min.js"></script>
+	<script src="assets\ContactFrom_v12\vendor\bootstrap\js\popper.js"></script>
+	<script src="assets\ContactFrom_v12\vendor\bootstrap\js\bootstrap.min.js"></script>
+	<script src="assets\ContactFrom_v12\vendor\select2\select2.min.css"></script>
+	<script src="assets\ContactFrom_v12\vendor\tilt\tilt.jquery.min.js"></script>
+	<script>
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+
+	<script src="assets\ContactFrom_v12\js\main.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+</body>
+</html>
