@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Log in</title>
+  <title>AntarAja | Log in</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -46,9 +46,12 @@
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">
-        <div class="col-xs-4">
-          <div class="checkbox icheck">
+        <div class="col-xs-8">
+          <div class="">
+            
             <?php echo form_checkbox('remember', '1', FALSE, 'id="remember"');?>
+            Remember Me
+          </label>
           </div>
         </div><!-- /.col -->
         <div class="col-xs-4">

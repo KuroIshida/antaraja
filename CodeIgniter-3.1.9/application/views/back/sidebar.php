@@ -28,17 +28,22 @@
       <li class="header">MAIN NAVIGATION</li>
       <li>
         <a href="<?php echo base_url("news"); ?>">
-          <i class="fa fa-dashboard"></i> <span>NEWS</span>
-        </a>
-      </li>
-      <li>
-        <a href="<?php echo base_url("faq/adminFaq"); ?>">
-          <i class="fa fa-dashboard"></i> <span>FAQ</span>
+          <i class="fa fa-dashboard"></i> <span>Berita</span>
         </a>
       </li>
       <li>
         <a href="<?php echo base_url("intact/adminIntact"); ?>">
-          <i class="fa fa-dashboard"></i> <span>HUBUNGI KAMI</span>
+          <i class="fa fa-envelope"></i> <span>Hubungi Kami</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fa fa-edit"></i> <span>Pendaftaran Merchant</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fa fa-edit"></i> <span>Pendaftaran Driver</span>
         </a>
       </li>
     </ul>

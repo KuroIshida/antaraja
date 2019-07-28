@@ -30,7 +30,7 @@
       <a class="nav-link" href="<?php echo base_url("faq") ?>">FAQ</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="<?php echo base_url("intact") ?>">Kontak Kami</a>
+      <a class="nav-link" href="<?php echo base_url("message") ?>">Kontak Kami</a>
     </li>
     <li class="nav-item" style="padding-left:400px">
       <a class="navbar-brand nav-link" href="#"><img src="assets\fontawesome-free-5.9.0-web\svgs\solid\motorcycle.svg" alt="Join Driver" style="width:50px;height:40px"> Join Driver</a>

@@ -11,9 +11,12 @@
       <br><br>
 
     <!-- Carousel Start -->
-    <section class="Merchant">
-      <h4>Recomendded <strong class="text-primary">Places</strong></h4>
-      <h5 class="mb-5">Find Our Favourite <strong class="text-primary">Resto</strong> here</h5>
+    <section class="col-md-8 col-lg-8 col-sm-12 mb-4 d-flex align-items-center justify-content-center">
+      <div class="col-sm 12 col-md-8 col-lg-8 mb-5">
+        <h2>Recomendded <strong class="text-primary">Places</strong></h2><br>
+        <h4 class="mb-5">Find Our Favourite <strong class="text-primary">Resto</strong> here</h4>
+      </div>
+      <img style="align:right" src="assets\fontawesome-free-5.9.0-web\svgs\solid\arrow-alt-circle-down.svg" alt="">
     </section>
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="width:100%;height:50%">
       <div class="carousel-inner" style="padding-left:35%">
